@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="flex top-0 z-50 justify-between bg-white max-lg:sticky max-lg:shadow-md py-8 px-8 gap-8 lg:px-32 xl:px-64">
+    <header className="flex top-0 z-50 justify-between bg-white max-lg:sticky max-lg:shadow-sm py-8 px-8 gap-8 lg:px-32 xl:px-64">
       <div className="flex gap-8 justify-between w-full items-center">
         <Logo />
         <Navbar />
