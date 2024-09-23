@@ -1,41 +1,18 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import React from "react";
 import Logo from "./Logo";
+import MobileNavbar from "./MobileNavbar";
+import Navbar from "./Navbar";
 
 const Header = () => {
-  const path = usePathname();
-
-  const links = [
-    { path: "/", name: "Início" },
-    { path: "/contact", name: "Contatos" },
-    { path: "/sobre-nos", name: "Sobre" },
-  ];
-
-  console.log(path);
-
   return (
-    <header className=" flex justify-between py-8 px-32">
-      <div className="flex gap-32">
+    <header className="flex justify-between py-8 px-8 gap-8 lg:px-32">
+      <div className="flex max-lg:w-full max-lg:justify-between lg:gap-32">
         <Logo />
-        <div className="flex gap-8">
-          {links.map((item, index) => (
-            <button
-              className={`cursor-pointer hover:text-primary ${
-                path === item.path
-                  ? "text-primary font-semibold"
-                  : "text-secondary"
-              } `}
-              key={index}
-            >
-              {item.name}
-            </button>
-          ))}
-        </div>
+        <Navbar />
+        <MobileNavbar />
       </div>
-
-      <button className="hidden lg:flex py-4 gap-4 px-8 text-white font-semibold rounded-full bg-gradient-to-r from-primary to-[#6f3afa]">
+      <button className="hidden lg:flex py-3 gap-4 px-8 text-white font-semibold rounded-full bg-gradient-to-r from-primary to-[#6f3afa]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
