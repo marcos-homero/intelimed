@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Location = () => {
   return (
-    <div className="flex flex-col bg-[#E2EDFF] items-center lg:flex-row py-16 px-8 gap-8 lg:px-32">
+    <div className="flex flex-col bg-[#E2EDFF] items-center lg:flex-row py-16 px-8 gap-8 lg:px-32 xl:px-64">
       <div className="lg:w-1/2 rounded-md">
         <Image
           src={intelimed}

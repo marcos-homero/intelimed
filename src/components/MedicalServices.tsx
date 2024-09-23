@@ -27,7 +27,10 @@ const MedicalServices = () => {
   ];
 
   return (
-    <div className="flex flex-col py-16 px-8 gap-16 lg:px-32">
+    <div
+      id="services"
+      className="flex flex-col py-16 px-8 gap-16 lg:px-32 xl:px-64"
+    >
       <div className="flex lg:justify-between flex-col gap-8 lg:flex-row items-center">
         <h3 className="text-[#031432] text-2xl font-semibold">Serviços</h3>
         <p className="text-secondary lg:w-1/2">

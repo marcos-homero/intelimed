@@ -4,7 +4,10 @@ import intelimed from "@/public/intelimed.png";
 
 const About = () => {
   return (
-    <div className="flex flex-col lg:justify-between items-center lg:flex-row py-16 px-8 gap-8 lg:px-32">
+    <div
+      id="about"
+      className="flex flex-col lg:justify-between items-center lg:flex-row py-16 px-8 gap-8 lg:px-32 xl:px-64"
+    >
       <div className="lg:w-1/2 flex justify-between lg:justify-around lg:py-8 flex-col gap-8 lg:gap-4">
         <h4 className="text-[#031432] max-lg:text-center text-2xl font-semibold">
           Klinik 24 siap.

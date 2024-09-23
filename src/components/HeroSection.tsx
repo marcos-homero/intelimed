@@ -4,8 +4,11 @@ import doctor from "@/public/doctor.png";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between gap-8 px-8 lg:px-32 items-center">
-      <div className="lg:w-1/2 flex flex-col gap-8">
+    <div
+      id="herosection"
+      className="flex flex-col lg:flex-row lg:justify-between gap-4 px-8 max-lg:py-16 lg:px-32 xl:px-64 items-center"
+    >
+      <div className="lg:w-2/5 flex flex-col gap-8 max-lg:py-4">
         <h1 className="text-primary text-4xl max-lg:text-center lg:text-2xl xl:text-4xl font-bold">
           Klinik 24 siap melayani keluhan masyarakat selama 24/7.
         </h1>
@@ -33,11 +36,10 @@ const HeroSection = () => {
           Saiba Mais
         </button>
       </div>
-      <div className="lg:w-1/2">
+      <div className="flex w-4/5 lg:w-2/5">
         <Image
           src={doctor}
-          width={500}
-          height={500}
+          className="w-full h-auto"
           alt="Picture of the author"
         />
       </div>

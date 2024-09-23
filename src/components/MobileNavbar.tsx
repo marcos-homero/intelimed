@@ -1,40 +1,59 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Logo from "./Logo";
+import { usePathname } from "next/navigation";
+
+import { AlignJustify } from "lucide-react";
+import { Link } from "react-scroll";
+import Socials from "./Socials";
 
 const MobileNavbar = () => {
+  const path = usePathname();
+
+  const links = [
+    { path: "/", name: "Início", scrolled: "herosection" },
+    { path: "/convenios", name: "Convênios", scrolled: "partners" },
+    { path: "/servicos", name: "Serviços", scrolled: "services" },
+    { path: "/sobre-nos", name: "Sobre", scrolled: "about" },
+    { path: "/contato", name: "Contatos", scrolled: "footer" },
+  ];
+
   return (
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-8 text-primary"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <AlignJustify size={36} className="text-primary" />
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="flex flex-col gap-8">
           <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription>
+            <SheetTitle className="flex justify-center">
+              <Logo />
+            </SheetTitle>
           </SheetHeader>
+          <div className="flex flex-col gap-2">
+            {links.map((item, index) => (
+              <Link
+                to={item.scrolled}
+                smooth={true}
+                duration={1500}
+                className={`cursor-pointer hover:text-primary ${
+                  path === item.path
+                    ? "text-primary font-semibold"
+                    : "text-secondary"
+                } `}
+                key={index}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <Socials />
         </SheetContent>
       </Sheet>
     </div>

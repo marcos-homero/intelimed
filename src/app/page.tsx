@@ -12,8 +12,8 @@ export default function Home() {
       <HeroSection />
       <Partners />
       <MedicalServices />
-      <Location />
       <About />
+      <Location />
       <Appointment />
       <Review />
     </div>

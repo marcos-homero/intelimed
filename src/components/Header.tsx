@@ -6,13 +6,13 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="flex justify-between py-8 px-8 gap-8 lg:px-32">
-      <div className="flex max-lg:w-full max-lg:justify-between lg:gap-32">
+    <header className="flex top-0 z-50 justify-between max-lg:sticky py-8 px-8 gap-8 lg:px-32 xl:px-64">
+      <div className="flex gap-8 justify-between w-full items-center">
         <Logo />
         <Navbar />
         <MobileNavbar />
       </div>
-      <button className="hidden lg:flex py-3 gap-4 px-8 text-white font-semibold rounded-full bg-gradient-to-r from-primary to-[#6f3afa]">
+      <button className="hidden lg:flex py-3 gap-4 max-xl:text-sm items-center px-4 xl:px-8 text-white font-semibold rounded-full bg-gradient-to-r from-primary to-[#6f3afa]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
